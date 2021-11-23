@@ -365,5 +365,5 @@ jobs:
       - name: Upload Bin Archive
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt
-          path: openwrt/bin
+          name: bin-archive
+          path: ${{ env.OPENWRT_ROOT_PATH }}/${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}.zip
